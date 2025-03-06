@@ -1,17 +1,17 @@
-import React from 'react';
+import { FC } from 'react';
 
 export interface ButtonProps {
-  label: string;
+  children: React.ReactNode;
   onClick?: () => void;
 }
 
-export const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+export const Button: FC<ButtonProps> = ({ children, onClick }) => {
   return (
     <button
       className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
       onClick={onClick}
     >
-      {label}
+      {children}
     </button>
   );
 };
