@@ -1,12 +1,12 @@
 ````markdown:README.md
-# Keyboard Manager
+# Keyboard Manager Pro
 
 A React package for managing keyboard shortcuts and sequences, with TypeScript support and Next.js compatibility.
 
 ## Installation
 
 ```bash
-npm install keyboard-manager
+npm install keyboard-manager-pro
 ````
 
 ## Features
@@ -19,7 +19,7 @@ npm install keyboard-manager
 ## Usage
 
 ```tsx
-import { useKeyboard } from 'keyboard-manager';
+import { useKeyboard } from 'keyboard-manager-pro';
 
 function App() {
   // TODO: Add an example
@@ -43,8 +43,8 @@ This project uses:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/keyboard-manager.git
-cd keyboard-manager
+git clone https://github.com/yourusername/keyboard-manager-pro.git
+cd keyboard-manager-pro
 ```
 
 2. Install dependencies:

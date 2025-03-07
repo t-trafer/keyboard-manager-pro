@@ -1,14 +1,12 @@
 {
-  "name": "keyboard-manager",
+  "name": "keyboard-manager-pro",
   "version": "1.0.0",
   "description": "This package helps manage keyboard shortcuts and sequences for your react application",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -55,6 +53,8 @@
   "keywords": [
     "react",
     "keyboard",
+    "keyboard manager",
+    "keyboard manager pro",
     "shortcuts",
     "nextjs"
   ],
@@ -62,6 +62,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/t-trafer/keyboard-manager"
+    "url": "https://github.com/t-trafer/keyboard-manager-pro"
   }
 }
