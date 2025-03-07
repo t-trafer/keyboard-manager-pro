@@ -15,7 +15,6 @@ npm install keyboard-manager
 - 📦 Fully typed with TypeScript
 - 🔄 Compatible with Next.js
 - 🎨 Tailwind CSS support
-- 📚 Storybook documentation
 - ✅ Comprehensive test suite
 
 ## Usage
@@ -36,7 +35,6 @@ This project uses:
 - Vitest for testing
 - ESLint for linting
 - Prettier for code formatting
-- Storybook for component documentation
 - Tailwind CSS for styling
 - Changesets for version management
 - Husky for git hooks
@@ -71,8 +69,6 @@ npm run dev
 - `npm run test:watch` - Run tests in watch mode
 - `npm run lint` - Run ESLint
 - `npm run format` - Format code with Prettier
-- `npm run storybook` - Start Storybook development server
-- `npm run build-storybook` - Build Storybook for production
 
 ### Contributing
 
@@ -87,7 +83,6 @@ git checkout -b feature/amazing-feature
 
    - Write tests for new features
    - Follow the conventional commits specification
-   - Add stories for new components
    - Run tests and linting before committing
 
 4. Create a changeset to document your changes:
@@ -136,14 +131,6 @@ npm test
 
 # Watch mode
 npm run test:watch
-```
-
-## Documentation
-
-Visit our Storybook documentation to see components in action:
-
-```bash
-npm run storybook
 ```
 
 ## License
