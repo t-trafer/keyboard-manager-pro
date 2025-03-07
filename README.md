@@ -1,13 +1,19 @@
-````markdown:README.md
 # Keyboard Manager Pro
 
 A React package for managing keyboard shortcuts and sequences, with TypeScript support and Next.js compatibility.
+
+[![npm version](https://img.shields.io/npm/v/keyboard-manager-pro.svg)](https://www.npmjs.com/package/keyboard-manager-pro)
+[![npm downloads](https://img.shields.io/npm/dm/keyboard-manager-pro.svg)](https://www.npmjs.com/package/keyboard-manager-pro)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/keyboard-manager-pro)](https://bundlephobia.com/package/keyboard-manager-pro)
+[![License](https://img.shields.io/npm/l/keyboard-manager-pro)](https://github.com/t-trafer/keyboard-manager-pro/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/t-trafer/keyboard-manager-pro)](https://github.com/t-trafer/keyboard-manager-pro/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/t-trafer/keyboard-manager-pro)](https://github.com/t-trafer/keyboard-manager-pro/issues)
 
 ## Installation
 
 ```bash
 npm install keyboard-manager-pro
-````
+```
 
 ## Features
 
