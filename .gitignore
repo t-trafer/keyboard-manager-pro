@@ -11,7 +11,6 @@ coverage
 # Production
 dist
 build
-storybook-static
 
 # Misc
 .DS_Store
@@ -40,3 +39,5 @@ yarn-error.log*
 
 # Misc
 *.log
+
+adr
