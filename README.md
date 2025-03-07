@@ -14,7 +14,6 @@ npm install keyboard-manager
 - 🎯 Zero dependencies (except React)
 - 📦 Fully typed with TypeScript
 - 🔄 Compatible with Next.js
-- 🎨 Tailwind CSS support
 - ✅ Comprehensive test suite
 
 ## Usage
@@ -35,7 +34,6 @@ This project uses:
 - Vitest for testing
 - ESLint for linting
 - Prettier for code formatting
-- Tailwind CSS for styling
 - Changesets for version management
 - Husky for git hooks
 - Conventional Commits for commit messages

@@ -8,8 +8,6 @@ const config = {
   printWidth: 80,
   arrowParens: 'always',
   endOfLine: 'lf',
-  plugins: ['prettier-plugin-tailwindcss'],
-  tailwindConfig: './tailwind.config.ts',
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
