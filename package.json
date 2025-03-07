@@ -10,6 +10,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "push": "yalc publish --push",
     "test": "vitest --run",
     "test:watch": "vitest --watch",
     "lint": "eslint src --ext .ts,.tsx",
@@ -50,7 +51,8 @@
     "tailwindcss": "^4.0.11",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2",
-    "vitest": "^3.0.8"
+    "vitest": "^3.0.8",
+    "yalc": "^1.0.0-pre.53"
   },
   "keywords": ["react", "keyboard", "shortcuts", "nextjs"],
   "author": "nilesh",
