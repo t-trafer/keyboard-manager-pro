@@ -1,12 +1,14 @@
 {
   "name": "keyboard-manager-pro",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This package helps manage keyboard shortcuts and sequences for your react application",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
