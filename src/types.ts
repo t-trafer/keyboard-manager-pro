@@ -12,5 +12,3 @@ export interface KeyboardManagerContextValue {
 export interface KeyboardManagerProviderProps {
   children: React.ReactNode;
 }
-
-export type ModifierKey = 'ctrl' | 'shift' | 'alt' | 'meta';
