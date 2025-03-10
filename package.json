@@ -6,7 +6,9 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -62,6 +64,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/t-trafer/keyboard-manager-pro.git"
+    "url": "git+https://github.com/t-trafer/keyboard-manager-pro.git"
   }
 }
