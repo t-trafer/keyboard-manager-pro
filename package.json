@@ -64,6 +64,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/t-trafer/keyboard-manager-pro.git"
+    "url": "git+https://github.com/t-trafer/keyboard-manager-pro.git"
   }
 }
