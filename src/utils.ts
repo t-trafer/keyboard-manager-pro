@@ -26,3 +26,16 @@ export function matchKeyCombo(event: KeyboardEvent, combo: string) {
   if (mainKey === DELIMITER.key) return event.key === DELIMITER.value;
   return mainKey.toLowerCase() === event.key.toLowerCase();
 }
+
+export function isInputElement(element: HTMLElement): boolean {
+  const tagName = element.tagName?.toLowerCase();
+  return (
+    tagName === 'input' || tagName === 'textarea' || element.isContentEditable
+  );
+}
+
+export function debugLog(...messages: unknown[]) {
+  if (process.env.DEBUG_KEYBOARD_MANAGER === 'true') {
+    console.log('[KeyboardManager]: ', ...messages);
+  }
+}
