@@ -2,14 +2,8 @@ import { useEffect, useMemo, useRef } from 'react';
 
 import { KeyBinding, KeyboardManagerProviderProps } from '../types';
 import { KeyboardManagerContext } from './keyboard-manager-context';
-import { matchKeyCombo } from '../utils';
-
-export function isInputElement(element: HTMLElement): boolean {
-  const tagName = element.tagName?.toLowerCase();
-  return (
-    tagName === 'input' || tagName === 'textarea' || element.isContentEditable
-  );
-}
+import { DELIMITER } from '../constants';
+import { debugLog, isInputElement, matchKeyCombo } from '../utils';
 
 export function KeyboardManagerProvider({
   children,
@@ -21,20 +15,37 @@ export function KeyboardManagerProvider({
     if (!enabled) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
+      debugLog(
+        `Handling keydown event for ${[
+          e.ctrlKey && 'ctrl',
+          e.shiftKey && 'shift',
+          e.altKey && 'alt',
+          e.metaKey && 'meta',
+          e.key,
+        ]
+          .filter(Boolean)
+          .join(DELIMITER.value)}`
+      );
       for (const binding of bindings.current.values()) {
         if (!binding.allowInput && isInputElement(e.target as HTMLElement)) {
+          debugLog(
+            `Skipping binding (${binding.id}) because it is an input element`
+          );
           continue;
         }
-        const match = binding.combos.some((combo) => matchKeyCombo(e, combo));
+        const match = binding.combos.find((combo) => matchKeyCombo(e, combo));
         if (match) {
+          debugLog(`Binding (${binding.id}) matched key combo (${match})`);
           binding.handler(e);
           return;
         }
       }
     };
 
+    debugLog('Adding event listener');
     window.addEventListener('keydown', handleKeyDown);
     return () => {
+      debugLog('Removing event listener');
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [enabled]);
@@ -42,9 +53,11 @@ export function KeyboardManagerProvider({
   const keyboard = useMemo(
     () => ({
       registerBinding: (binding: KeyBinding) => {
+        debugLog(`Registering binding (${binding.id})`);
         bindings.current.set(binding.id, binding);
       },
       unregisterBinding: (id: string) => {
+        debugLog(`Unregistering binding (${id})`);
         bindings.current.delete(id);
       },
     }),
