@@ -1,4 +1,4 @@
-import { DELIMITER, MODIFIER_KEYS } from './constants';
+import { DEBUG_KEYBOARD_MANAGER, DELIMITER, MODIFIER_KEYS } from './constants';
 
 /**
  * Match a key combo against a keyboard event
@@ -35,7 +35,7 @@ export function isInputElement(element: HTMLElement): boolean {
 }
 
 export function debugLog(...messages: unknown[]) {
-  if (process.env.DEBUG_KEYBOARD_MANAGER === 'true') {
+  if (DEBUG_KEYBOARD_MANAGER) {
     console.log('[KeyboardManager]: ', ...messages);
   }
 }

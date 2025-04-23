@@ -59,3 +59,6 @@ export const DELIMITER = {
   value: '+',
   key: 'plus',
 };
+
+export const DEBUG_KEYBOARD_MANAGER =
+  process.env.DEBUG_KEYBOARD_MANAGER === 'true';
