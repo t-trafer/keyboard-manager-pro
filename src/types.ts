@@ -2,6 +2,7 @@ export interface KeyBinding {
   id: string;
   combos: string[];
   handler: (e: KeyboardEvent) => void;
+  allowInput?: boolean;
 }
 
 export interface KeyboardManagerContextValue {

@@ -4,6 +4,13 @@ import { KeyBinding, KeyboardManagerProviderProps } from '../types';
 import { KeyboardManagerContext } from './keyboard-manager-context';
 import { matchKeyCombo } from '../utils';
 
+export function isInputElement(element: HTMLElement): boolean {
+  const tagName = element.tagName?.toLowerCase();
+  return (
+    tagName === 'input' || tagName === 'textarea' || element.isContentEditable
+  );
+}
+
 export function KeyboardManagerProvider({
   children,
 }: KeyboardManagerProviderProps) {
@@ -12,6 +19,9 @@ export function KeyboardManagerProvider({
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       for (const binding of bindings.current.values()) {
+        if (!binding.allowInput && isInputElement(e.target as HTMLElement)) {
+          continue;
+        }
         const match = binding.combos.some((combo) => matchKeyCombo(e, combo));
         if (match) {
           binding.handler(e);
