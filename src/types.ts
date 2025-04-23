@@ -12,4 +12,5 @@ export interface KeyboardManagerContextValue {
 
 export interface KeyboardManagerProviderProps {
   children: React.ReactNode;
+  enabled?: boolean;
 }

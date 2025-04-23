@@ -13,10 +13,13 @@ export function isInputElement(element: HTMLElement): boolean {
 
 export function KeyboardManagerProvider({
   children,
+  enabled = true,
 }: KeyboardManagerProviderProps) {
   const bindings = useRef(new Map<string, KeyBinding>());
 
   useEffect(() => {
+    if (!enabled) return;
+
     const handleKeyDown = (e: KeyboardEvent) => {
       for (const binding of bindings.current.values()) {
         if (!binding.allowInput && isInputElement(e.target as HTMLElement)) {
@@ -34,7 +37,7 @@ export function KeyboardManagerProvider({
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [enabled]);
 
   const keyboard = useMemo(
     () => ({
